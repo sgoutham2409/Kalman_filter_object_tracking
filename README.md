@@ -7,3 +7,5 @@ Kalman filter is implemented in Python with the following assumptions:
   2. Measurement corrupted by a gaussian noise
 
 Unittest framework and Pytest used to create and run simple tests to validate the Kalman filter behavior
+
+My takeaway: The key idea of Kalman filter is to combine multiple sources of inaccurate data representing the real value to get a more accurate estimate for the real value than each of the independent data sources.
