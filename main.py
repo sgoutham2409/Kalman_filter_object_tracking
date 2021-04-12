@@ -40,17 +40,19 @@ for step in range(NUM_STEPS):
     real_positions.append(real_position)
     real_velocities.append(real_velocity)
 
+# plot the real and the estimated positions
 plt.subplot(2,1,1)
 plt.title('Position')
-plt.plot([mu[0] for mu in means], 'r')
+plt.plot([mu[0] for mu in means], 'r') # mu[0] contains the estimated position in the mean state vector
 plt.plot(real_positions, 'b')
 # 2 standard deviations bound
 plt.plot([mu[0] - 2*np.sqrt(cov[0,0]) for mu, cov in zip(means, covariances)], 'r--')
 plt.plot([mu[0] + 2*np.sqrt(cov[0,0]) for mu, cov in zip(means, covariances)], 'r--')
 
+# plot the real and the estimated velocities
 plt.subplot(2,1,2)
 plt.title('Velocity')
-plt.plot([mu[1] for mu in means], 'r')
+plt.plot([mu[1] for mu in means], 'r') # mu[1] contains the estimated velocity in the mean state vector
 plt.plot(real_velocities, 'b')
 # 2 standard deviations bound
 plt.plot([mu[1] - 2*np.sqrt(cov[1,1]) for mu, cov in zip(means, covariances)], 'r--')
