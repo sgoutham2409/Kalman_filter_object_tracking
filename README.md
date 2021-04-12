@@ -1,6 +1,6 @@
 # Kalman_filter_object_tracking
 This project is an attempt at understanding the working of Kalman filter for estimating the unknown state of a system based on a series of measurements and the prior knowledge of the system motion model. 
-Here the state of an object, [position, velocity]', is estimated with higher accuracy by combining the less accurate measurement of the object's state based on detection (for instance, it could be background subtraction) and the less accurate predictions of the object's state based on the prior motion model.
+Here the state of an object, [position, velocity]', is estimated with a higher accuracy by combining the less accurate measurement of the object's state based on detection (for instance, it could be background subtraction) and the less accurate predictions of the object's state based on the prior motion model.
  
 Kalman filter is implemented in Python with the following assumptions:
   1. A linear motion model, noisy acceleration model
